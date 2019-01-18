@@ -1,0 +1,39 @@
+body
+{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center; /*Ubicacion*/
+  align-items: center;
+  height: 100vh;       /*¿Pocision del texto en general?*/
+  background: #000;
+}
+
+p
+{
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 2px; /*Espacio entre letras*/
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);   /*Se le pone degradado al efecto de las letras*/
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255,255,255,.01); /*Se puede poner  transparent*/
+
+}
+
+@keyframes animate
+{
+  0%
+  {
+    background-position: -500%;
+  }
+  100%
+  {
+    background-position: 500%;
+  }
+}
